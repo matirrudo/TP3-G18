@@ -17,6 +17,7 @@ public class Principal {
         gestor.agregarCirculo(circulo2);
         gestor.agregarCirculo(circulo3);
         
+        
         for (Circulo asd : gestor.getListaCirculos()) {
             System.out.println(asd.getRadio());
             System.out.println(asd.calcularArea());
