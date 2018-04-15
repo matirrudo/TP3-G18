@@ -27,6 +27,16 @@ public class GestorRectangulos {
         listaPer.add(a.getPer());
         
     }
+    public void eliminarRectangulo(int a){
+        listaRectangulos.remove(a);
+        listaNombres.remove(a);
+        listaX.remove(a);
+        listaY.remove(a);
+        listaBase.remove(a);
+        listaAltura.remove(a);
+        listaSup.remove(a);
+        listaPer.remove(a);
+    }
    
     public ArrayList<Rectangulo> getListaRectangulos() {
         return listaRectangulos;
