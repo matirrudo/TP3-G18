@@ -1,156 +1,140 @@
 package punto6.dominio;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class GestorRectangulos {
+    private ArrayList<Rectangulo> listaRectangulos= new ArrayList();
+    private ArrayList<String> listaNombres= new ArrayList();
+    private ArrayList<Double> listaX= new ArrayList();
+    private ArrayList<Double> listaY= new ArrayList();
+    private ArrayList<Double> listaBase= new ArrayList();
+    private ArrayList<Double> listaAltura= new ArrayList();
+    private ArrayList<Double> listaSup= new ArrayList();
+    private ArrayList<Double> listaPer= new ArrayList();
 
-    private Rectangulo[] vectorRectangulos = new Rectangulo[3];
-    private double[] vectorAlturas = new double[3];
-    private double[] vectorBases = new double[3];
-    private double[] vectorPer = new double[3];
-    private double[] vectorSup = new double[3];
-    private double[] vectorXs = new double[3];
-    private double[] vectorYs = new double[3];
+    public GestorRectangulos(Rectangulo a) {
+    }
 
-    public GestorRectangulos(){
+    
+    public void agregarRectangulo(Rectangulo a){
+        listaRectangulos.add(a);
+        listaNombres.add(a.getNombre());
+        listaX.add(a.getX());
+        listaY.add(a.getY());
+        listaBase.add(a.getBase());
+        listaAltura.add(a.getAltura());
+        listaSup.add(a.getSup());
+        listaPer.add(a.getPer());
         
     }
-//    public GestorRectangulos(Rectangulo a) {
-//        for (int i = 0; i < vectorRectangulos.length; i++) {
-//            this.vectorAlturas[i] = a.getAltura();
-//            this.vectorBases[i] = a.getBase();
-//            this.vectorPer[i] = a.getPer();
-//            this.vectorSup[i] = a.getSup();
-//            this.vectorXs[i] = a.getX();
-//            this.vectorYs[i] = a.getY();
-//        }
-//    }
-
-    public void mostrarRectangulosYDatos(){
-        System.out.println(vectorRectangulos[0].getX());
-    }
-    public void agregarRectangulo(Rectangulo a) {
-        for (int i = 0; i < getVectorRectangulos().length; i++) {
-            getVectorRectangulos()[i] = a;
-            getVectorAlturas()[i] = a.getBase();
-            getVectorBases()[i] = a.getPer();
-            getVectorPer()[i] = a.getSup();
-            getVectorSup()[i] = a.getX();
-            getVectorXs()[i] = a.getY();
-            getVectorYs()[i] = a.getY();
-        }
-    }
-
-    public void eliminarRectangulo(int a, GestorRectangulos b, Rectangulo c) {
-        for (int i = 0; i < b.vectorRectangulos.length; i++) {
-            if (i == a) {
-                getVectorRectangulos()[i] = c;
-                getVectorAlturas()[i] = 0;
-                getVectorBases()[i] = 0;
-                getVectorPer()[i] = 0;
-                getVectorSup()[i] = 0;
-                getVectorXs()[i] = 0;
-                getVectorYs()[i] = 0;
-            }
-        }
+   
+    public ArrayList<Rectangulo> getListaRectangulos() {
+        return listaRectangulos;
     }
 
     /**
-     * @return the vectorRectangulos
+     * @param listaRectangulos the listaRectangulos to set
      */
-    public Rectangulo[] getVectorRectangulos() {
-        return vectorRectangulos;
+    public void setListaRectangulos(ArrayList<Rectangulo> listaRectangulos) {
+        this.listaRectangulos = listaRectangulos;
     }
 
     /**
-     * @param vectorRectangulos the vectorRectangulos to set
+     * @return the listaNombres
      */
-    public void setVectorRectangulos(Rectangulo[] vectorRectangulos) {
-        this.vectorRectangulos = vectorRectangulos;
+    public ArrayList<String> getListaNombres() {
+        return listaNombres;
     }
 
     /**
-     * @return the vectorAlturas
+     * @param listaNombres the listaNombres to set
      */
-    public double[] getVectorAlturas() {
-        return vectorAlturas;
+    public void setListaNombres(ArrayList<String> listaNombres) {
+        this.listaNombres = listaNombres;
     }
 
     /**
-     * @param vectorAlturas the vectorAlturas to set
+     * @return the listaX
      */
-    public void setVectorAlturas(double[] vectorAlturas) {
-        this.vectorAlturas = vectorAlturas;
+    public ArrayList<Double> getListaX() {
+        return listaX;
     }
 
     /**
-     * @return the vectorBases
+     * @param listaX the listaX to set
      */
-    public double[] getVectorBases() {
-        return vectorBases;
+    public void setListaX(ArrayList<Double> listaX) {
+        this.listaX = listaX;
     }
 
     /**
-     * @param vectorBases the vectorBases to set
+     * @return the listaY
      */
-    public void setVectorBases(double[] vectorBases) {
-        this.vectorBases = vectorBases;
+    public ArrayList<Double> getListaY() {
+        return listaY;
     }
 
     /**
-     * @return the vectorPer
+     * @param listaY the listaY to set
      */
-    public double[] getVectorPer() {
-        return vectorPer;
+    public void setListaY(ArrayList<Double> listaY) {
+        this.listaY = listaY;
     }
 
     /**
-     * @param vectorPer the vectorPer to set
+     * @return the listaBase
      */
-    public void setVectorPer(double[] vectorPer) {
-        this.vectorPer = vectorPer;
+    public ArrayList<Double> getListaBase() {
+        return listaBase;
     }
 
     /**
-     * @return the vectorSup
+     * @param listaBase the listaBase to set
      */
-    public double[] getVectorSup() {
-        return vectorSup;
+    public void setListaBase(ArrayList<Double> listaBase) {
+        this.listaBase = listaBase;
     }
 
     /**
-     * @param vectorSup the vectorSup to set
+     * @return the listaAltura
      */
-    public void setVectorSup(double[] vectorSup) {
-        this.vectorSup = vectorSup;
+    public ArrayList<Double> getListaAltura() {
+        return listaAltura;
     }
 
     /**
-     * @return the vectorXs
+     * @param listaAltura the listaAltura to set
      */
-    public double[] getVectorXs() {
-        return vectorXs;
+    public void setListaAltura(ArrayList<Double> listaAltura) {
+        this.listaAltura = listaAltura;
     }
 
     /**
-     * @param vectorXs the vectorXs to set
+     * @return the listaSup
      */
-    public void setVectorXs(double[] vectorXs) {
-        this.vectorXs = vectorXs;
+    public ArrayList<Double> getListaSup() {
+        return listaSup;
     }
 
     /**
-     * @return the vectorYs
+     * @param listaSup the listaSup to set
      */
-    public double[] getVectorYs() {
-        return vectorYs;
+    public void setListaSup(ArrayList<Double> listaSup) {
+        this.listaSup = listaSup;
     }
 
     /**
-     * @param vectorYs the vectorYs to set
+     * @return the listaPer
      */
-    public void setVectorYs(double[] vectorYs) {
-        this.vectorYs = vectorYs;
+    public ArrayList<Double> getListaPer() {
+        return listaPer;
     }
 
+    /**
+     * @param listaPer the listaPer to set
+     */
+    public void setListaPer(ArrayList<Double> listaPer) {
+        this.listaPer = listaPer;
+    }
+    
 }
