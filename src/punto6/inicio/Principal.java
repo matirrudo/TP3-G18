@@ -20,7 +20,7 @@ public class Principal {
         
         for (Rectangulo asd: gestor.getListaRectangulos()) {
             System.out.println("NOMBRE: "+asd.getNombre());
-            System.out.println("punto x: "+asd.getX()+", punto y: "+asd.getY());
+            System.out.println("punto: ("+asd.getX()+", "+asd.getY()+")");
             System.out.println("base: "+asd.getBase()+", altura: "+asd.getAltura());
             System.out.println("perimetro: "+asd.getPer()+", superficie: "+asd.getSup());
             System.out.println("-----------------");    
