@@ -81,7 +81,7 @@ public class Rectangulo {
      * @return the sup
      */
     public double getSup() {
-        return sup;
+        return base*altura;
     }
 
     /**
@@ -95,7 +95,7 @@ public class Rectangulo {
      * @return the per
      */
     public double getPer() {
-        return per;
+        return 2*base+2*altura;
     }
 
     /**
