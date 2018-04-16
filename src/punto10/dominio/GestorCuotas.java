@@ -11,7 +11,7 @@ public class GestorCuotas {
         valorCuota= a.getPrecioUnit()/cuotas;
         for (int i = 0; i < cuotas; i++) {
             listaCuotas.add(valorCuota);
-            valorCuota=valorCuota+precioAgregado;
+            valorCuota=valorCuota+precioAgregado; 
             total=total+valorCuota;
             System.out.println("la cuota "+(i+1)+" es de: "+valorCuota);
             

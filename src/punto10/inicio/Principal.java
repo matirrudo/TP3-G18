@@ -30,7 +30,7 @@ public class Principal {
             System.out.println("el producto es: "+a.getNombre());
             System.out.println("el codigo es: "+a.getCodigo());
             System.out.println("el precio es: "+a.getPrecioUnit());
-            System.out.println("--------------------------");
+            System.out.println("--------------------------"); 
         }
         
         

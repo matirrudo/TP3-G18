@@ -10,7 +10,7 @@ public class Producto {
         this.nombre = nombre;
         this.precioUnit = precioUnit;
     }
-    
+     
     
 
     /**
