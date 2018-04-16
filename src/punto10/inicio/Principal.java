@@ -26,13 +26,7 @@ public class Principal {
         cuotas=sc.nextInt();
         gestor.calcularCuotas(cuotas, prod1);
         gestor.mostrarProducto(gestor.getListaProductos());
-        for (Producto a : gestor.getListaProductos()) {
-            System.out.println("el producto es: "+a.getNombre());
-            System.out.println("el codigo es: "+a.getCodigo());
-            System.out.println("el precio es: "+a.getPrecioUnit());
-            System.out.println("--------------------------"); 
-        }
-        
+             
         
         
     }

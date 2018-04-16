@@ -7,25 +7,29 @@ public class GestorCuotas {
     private ArrayList<Producto> listaProductos=new ArrayList();
     
     public void calcularCuotas(int cuotas,Producto a){
+        listaProductos.add(a);
         double valorCuota=0,precioAgregado=0, total=0;
         valorCuota= a.getPrecioUnit()/cuotas;
+        System.out.println("------------------------------");
         for (int i = 0; i < cuotas; i++) {
             listaCuotas.add(valorCuota);
             valorCuota=valorCuota+precioAgregado; 
             total=total+valorCuota;
-            System.out.println("la cuota "+(i+1)+" es de: "+valorCuota);
+            System.out.println("La cuota "+(i+1)+" es de: "+valorCuota);
             
             precioAgregado=(valorCuota*1.5)/100;
         }
         System.out.println("el precio final es: "+total);
+        System.out.println("------------------------------");
     }
     public void mostrarProducto(ArrayList<Producto> a){
         for (int i = 0; i < a.size(); i++) {
             System.out.println("oooooooooooooooooooooo");
-            System.out.println(a.get(i).getCodigo());
-            System.out.println(a.get(i).getNombre());
-            System.out.println(a.get(i).getPrecioUnit());
+            System.out.println("Codigo: "+a.get(i).getCodigo());
+            System.out.println("Nombre: "+a.get(i).getNombre());
+            System.out.println("Precio Unitario: "+a.get(i).getPrecioUnit());
             System.out.println("oooooooooooooooooooooo");
+            
         }
     }
    
