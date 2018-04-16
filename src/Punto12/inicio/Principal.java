@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
+
 public class Principal {
 
     
@@ -24,8 +25,8 @@ public class Principal {
         listaLibros[8]=new Libro("El Guardian entre el Centeno","Jerome David Salinger","Novela Dramatica");
         listaLibros[9]=new Libro("1984","George Orwell","Ciencia Ficcion");
         
+        System.out.println("Lista de todos los Libros:");
         for (int i=0;i<listaLibros.length;i++ ){
-            System.out.println("Lista de todos los Libros:");
             System.out.println((i+1)+"- "+listaLibros[i].getTitulo()+" - "+listaLibros[i].getAutor()+" - "+listaLibros[i].getCategoria());
         }
         
@@ -42,7 +43,7 @@ public class Principal {
         opcionIngresada=objScanner.nextInt();
         if (opcionIngresada==1){
             System.out.println("Ingrese el titulo del libro: ");
-            titulo=objScanner.nextLine();
+            titulo=objScanner.nextLine();//?????????????????????????????????????????????????????????????????????????????????????????????????????????xq no hace esa simple instruccion!!!!
             for(int i=0;i<listaLibros.length;i++){
                 if(listaLibros[i].getTitulo().equals(titulo)){
                     System.out.println(listaLibros[i].getTitulo()+" - "+listaLibros[i].getAutor()+" - "+listaLibros[i].getCategoria());
@@ -63,6 +64,35 @@ public class Principal {
                     }
                 }
                     }
+            if(opcionIngresada==3){
+                System.out.println("Elija la categoria en la que desea buscar: ");
+                for(int i=0; i<listaLibros.length;i++){
+                    System.out.println((i+1)+"- "+listaLibros[i].getCategoria());
+                }
+                opcionIngresada=objScanner.nextInt();
+                categoria=listaLibros[opcionIngresada-1].getCategoria();
+                
+                ArrayList<Libro> arrayListLibro=new ArrayList<Libro>();
+                for (int i =0;i<listaLibros.length;i++){
+                    if (listaLibros[i].getCategoria().equals(categoria))
+                    arrayListLibro.add(new Libro(listaLibros[i].getTitulo(),listaLibros[i].getAutor(),listaLibros[i].getCategoria()));
+                }
+                for (Libro e:arrayListLibro){
+                    System.out.println(e.getCategoria()+" - "+e.getTitulo()+" - "+e.getAutor());
+                }
+                
+                System.out.println("Ingrese el titulo del libro a buscar: ");
+                titulo=objScanner.nextLine();//?????????????????????????????????????????????????????????????????????????????????????????????????????????xq no hace esa simple instruccion!!!!
+                
+                for (int i=0; i<arrayListLibro.size();i++){
+                    
+                if ((arrayListLibro.get(i).getTitulo().compareTo(titulo))==0){
+                    System.out.println(arrayListLibro.get(i).getCategoria()+" - "+arrayListLibro.get(i).getAutor()+" - "+arrayListLibro.get(i).getTitulo());
+            }
+            }
+            
+            }
+            
                  
         
     }
