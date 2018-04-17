@@ -8,9 +8,9 @@ public class Principal {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Rectangulo rec1=new Rectangulo("rectangulo1",1, 2, 2, 4);
-        Rectangulo rec2=new Rectangulo("rectangulo2",5, 5, 3, 6);
-        Rectangulo rec3=new Rectangulo("rectangulo3",10, 10, 4, 8);
+        Rectangulo rec1=new Rectangulo("rectangulo0",1, 2, 2, 4);
+        Rectangulo rec2=new Rectangulo("rectangulo1",5, 5, 3, 6);
+        Rectangulo rec3=new Rectangulo("rectangulo2",10, 10, 4, 8);
         
         GestorRectangulos gestor =new GestorRectangulos(rec1);
         
@@ -29,12 +29,13 @@ public class Principal {
         boolean band=true;
         int rectangulo;
         while (band==true) {            
-            System.out.println("Que rectangulo quiere eliminar? (1, 2 o 3): ");
-            System.out.println("Para terminar ingrese 0: ");
+            System.out.println("Que indice del rectangulo quiere eliminar? (0, 1 o 2): ");
+            System.out.println("RECUERDE QUE AL ELIMINAR LOS INDICES SE SOBREESCRIBEN");
+            System.out.println("Para terminar ingrese cualquier numero: ");
             rectangulo=sc.nextInt();
-            if (rectangulo==1||rectangulo==2||rectangulo==3) {
-                gestor.eliminarRectangulo(rectangulo-1);   
-                System.out.println("SE A ELIMINADO EL RECTANGULO "+(rectangulo+1));
+            if (rectangulo==0||rectangulo==1||rectangulo==2) {
+                gestor.eliminarRectangulo(rectangulo);   
+                System.out.println("SE A ELIMINADO EL RECTANGULO "+(rectangulo));
             }else{
                 band=false;
             }
